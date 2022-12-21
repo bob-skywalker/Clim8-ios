@@ -19,40 +19,64 @@ struct WeatherModel{
     var conditionName: String {
         switch conditionId {
         case 200...232:
-            return ("cloud.bolt")
+            return "cloud.bolt"
         case 300...321:
-            return ("cloud.drizzle")
+            return "cloud.drizzle"
         case 500...531:
-            return ("cloud.rain")
+            return "cloud.rain"
         case 600...622:
-            return ("cloud.snow")
+            return "cloud.snow"
         case 701:
-            return ("humidifier.and.droplets")
+            return "humidifier.and.droplets"
         case 711:
-            return ("smoke.fill")
+            return "smoke.fill"
         case 721:
-            return ("sun.haze")
+            return "sun.haze"
         case 731:
-            return ("sun.dust.fill")
+            return "sun.dust.fill"
         case 741:
-            return ("cloud.fog.fill")
+            return "cloud.fog.fill"
         case 751:
-            return ("sun.dust.fill")
+            return "sun.dust.fill"
         case 761:
-            return ("sun.dust.fill")
+            return "sun.dust.fill"
         case 762:
-            return ("sun.dust.fill")
+            return "sun.dust.fill"
         case 771:
-            return ("cloud.snow.fill")
+            return "cloud.snow.fill"
         case 781:
-            return ("tornado")
+            return "tornado"
         case 800:
-            return ("sun.max")
+            return "sun.max"
         case 801...804:
-            return ("cloud")
+            return "cloud"
         default:
-            return ("cloud")
+            return "cloud"
         }
     }
+    
+    var backgroundImage: String{
+        switch conditionId {
+        case 200...531:
+            return "rainy"
+        case 600...622:
+            return "snowy"
+        case 701:
+            return "rainy"
+        case 711:
+            return "cloudy"
+        case 731...762:
+            return "sunny"
+        case 771:
+            return "snowy"
+        case 781:
+            return "windy"
+        case 800...804:
+            return "sunny"
+        default:
+            return "sunny"
+        }
+    }
+    
 }
 
