@@ -5,6 +5,11 @@
 //  Created by bo zhong on 12/19/22.
 //
 
+
+
+
+
+
 import UIKit
 import CoreLocation
 
@@ -14,6 +19,9 @@ class WeatherViewController: UIViewController{
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var weatherCondition: UILabel!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
@@ -21,7 +29,9 @@ class WeatherViewController: UIViewController{
     }
     
     var weatherManager = WeatherManager()
+    var photoManager = PhotoManager()
     let locationManager = CLLocationManager()
+    
     
     
     override func viewDidLoad() {
@@ -31,6 +41,7 @@ class WeatherViewController: UIViewController{
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
+        photoManager.delegate = self
         weatherManager.delegate = self
         searchTextField.delegate = self
     }
@@ -53,6 +64,7 @@ extension WeatherViewController: UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let city = searchTextField.text {
             weatherManager.fetchWeather(cityName: city)
+            photoManager.fetchPhotos(cityName: city)
             searchTextField.text = ""
         }
     }
@@ -76,6 +88,7 @@ extension WeatherViewController: WeatherManagerDelegate{
             self.temperatureLabel.text = weather.temperatureString
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
+            self.weatherCondition.text = weather.description
         }
     }
     
@@ -98,6 +111,19 @@ extension WeatherViewController: CLLocationManagerDelegate{
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+}
+
+
+extension WeatherViewController: PhotoManagerDelegate{
+    func didUpdatePhoto(_ photoManager: PhotoManager, photo: PhotoModel) {
+        DispatchQueue.main.async {
+            print(photo.photoURL)
+        }
+    }
+    
+    func didFailWithPhotoError(error: Error) {
         print(error)
     }
 }
