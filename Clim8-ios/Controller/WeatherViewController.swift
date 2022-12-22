@@ -8,10 +8,26 @@
 
 
 
-
-
 import UIKit
 import CoreLocation
+import Shiny
+
+
+extension UIImageView {
+    func loadFrom(URLAddress: String) {
+        guard let url = URL(string: URLAddress) else {
+            return
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            if let imageData = try? Data(contentsOf: url) {
+                if let loadedImage = UIImage(data: imageData) {
+                        self?.image = loadedImage
+                }
+            }
+        }
+    }
+}
 
 class WeatherViewController: UIViewController{
     
@@ -22,11 +38,17 @@ class WeatherViewController: UIViewController{
     @IBOutlet weak var weatherCondition: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     
+
     
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
+        backgroundImage.image = UIImage(named: "sunny")
         locationManager.requestLocation()
     }
+    
+    //use built-in image processer
+    let context = CIContext()
+    
     
     var weatherManager = WeatherManager()
     var photoManager = PhotoManager()
@@ -119,7 +141,7 @@ extension WeatherViewController: CLLocationManagerDelegate{
 extension WeatherViewController: PhotoManagerDelegate{
     func didUpdatePhoto(_ photoManager: PhotoManager, photo: PhotoModel) {
         DispatchQueue.main.async {
-            print(photo.photoURL)
+            self.backgroundImage.loadFrom(URLAddress: "\(photo.photoURL)")
         }
     }
     

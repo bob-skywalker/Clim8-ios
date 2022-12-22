@@ -46,7 +46,7 @@ struct PhotoManager{
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(PhotoData.self, from: photoData)
-            let photoURL = decodedData.results[0].urls.regular
+            let photoURL = decodedData.results[1].urls.regular
             
             let photo = PhotoModel(photoURL: photoURL)
             return photo

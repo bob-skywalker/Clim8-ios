@@ -19,6 +19,7 @@
 		5CCD275129524B02002C4B14 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD275029524B02002C4B14 /* WeatherManager.swift */; };
 		5CCD275329526665002C4B14 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD275229526665002C4B14 /* WeatherData.swift */; };
 		5CCD275529527F04002C4B14 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCD275429527F04002C4B14 /* WeatherModel.swift */; };
+		5CDAD4B82953E57400A5647B /* Shiny in Frameworks */ = {isa = PBXBuildFile; productRef = 5CDAD4B72953E57400A5647B /* Shiny */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDAD4B82953E57400A5647B /* Shiny in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +127,9 @@
 			dependencies = (
 			);
 			name = "Clim8-ios";
+			packageProductDependencies = (
+				5CDAD4B72953E57400A5647B /* Shiny */,
+			);
 			productName = "Clim8-ios";
 			productReference = 5CB0EDFA2950FA76008C9D3A /* Clim8-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 5CB0EDF12950FA75008C9D3A;
+			packageReferences = (
+				5CDAD4B62953E57300A5647B /* XCRemoteSwiftPackageReference "shiny" */,
+			);
 			productRefGroup = 5CB0EDFB2950FA76008C9D3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,6 +412,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5CDAD4B62953E57300A5647B /* XCRemoteSwiftPackageReference "shiny" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maustinstar/shiny";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5CDAD4B72953E57400A5647B /* Shiny */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5CDAD4B62953E57300A5647B /* XCRemoteSwiftPackageReference "shiny" */;
+			productName = Shiny;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5CB0EDF22950FA76008C9D3A /* Project object */;
 }
