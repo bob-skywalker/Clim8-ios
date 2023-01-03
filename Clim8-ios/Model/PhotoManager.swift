@@ -46,10 +46,15 @@ struct PhotoManager{
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(PhotoData.self, from: photoData)
-            let photoURL = decodedData.results[1].urls.regular
-            
+            if decodedData.results.count == 0 {
+                print("no data loaded")
+                return PhotoModel(photoURL: "https://i.postimg.cc/5y5kyB10/CITY-NOT-FOUND-1.png")
+            }
+            let photoURL = decodedData.results[0].urls.regular
             let photo = PhotoModel(photoURL: photoURL)
             return photo
+            
+
         } catch {
             self.delegate?.didFailWithPhotoError(error: error)
             return nil
