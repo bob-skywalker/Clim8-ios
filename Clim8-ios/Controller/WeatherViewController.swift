@@ -38,6 +38,11 @@ class WeatherViewController: UIViewController{
     @IBOutlet weak var weatherCondition: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     
+    
+    @IBOutlet weak var forecastView: UIView!
+    
+    
+    
 
     
     
@@ -66,6 +71,8 @@ class WeatherViewController: UIViewController{
         photoManager.delegate = self
         weatherManager.delegate = self
         searchTextField.delegate = self
+        
+        forecastView.layer.cornerRadius = 35
     }
     
     
