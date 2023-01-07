@@ -43,7 +43,10 @@ class WeatherViewController: UIViewController{
     
     
     
-
+    @IBOutlet weak var currConditionImageView: UIImageView!
+    @IBOutlet weak var currLowTemp: UILabel!
+    @IBOutlet weak var currHighTemp: UILabel!
+    
     
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
@@ -118,6 +121,9 @@ extension WeatherViewController: WeatherManagerDelegate{
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
             self.weatherCondition.text = weather.description
+            self.currLowTemp.text = String(weather.tempMin)
+            self.currHighTemp.text = String(weather.tempMax)
+            self.currConditionImageView.image = UIImage(systemName: weather.conditionName)
         }
     }
     

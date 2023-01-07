@@ -134,9 +134,9 @@
                                                                 <imageReference key="image" image="cloud.rain" catalog="system" symbolScale="large"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5W-jc-NVq" userLabel="Temperature Label">
-                                                                <rect key="frame" x="154" y="0.66666666666662877" width="43.333333333333343" height="36"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5W-jc-NVq" userLabel="Temperature Label">
+                                                                <rect key="frame" x="154" y="3.6666666666666288" width="43.333333333333343" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -144,10 +144,10 @@
                                                                 <rect key="frame" x="227.33333333333334" y="16.666666666666629" width="43.000000000000028" height="4"/>
                                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                             </progressView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UC-Or-9Bf" userLabel="Temperature Label">
-                                                                <rect key="frame" x="300.33333333333331" y="0.66666666666662877" width="43" height="36"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UC-Or-9Bf" userLabel="Temperature Label">
+                                                                <rect key="frame" x="300.33333333333331" y="3.6666666666666288" width="43" height="30"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -170,9 +170,9 @@
                                                                 <imageReference key="image" image="cloud.rain" catalog="system" symbolScale="large"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xiy-C2-FCa" userLabel="Temperature Label">
-                                                                <rect key="frame" x="154" y="0.66666666666662877" width="43.333333333333343" height="36"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xiy-C2-FCa" userLabel="Temperature Label">
+                                                                <rect key="frame" x="154" y="3.6666666666666288" width="43.333333333333343" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -180,10 +180,10 @@
                                                                 <rect key="frame" x="227.33333333333334" y="16.666666666666629" width="43.000000000000028" height="4"/>
                                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                             </progressView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfZ-1a-f0i" userLabel="Temperature Label">
-                                                                <rect key="frame" x="300.33333333333331" y="0.66666666666662877" width="43" height="36"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfZ-1a-f0i" userLabel="Temperature Label">
+                                                                <rect key="frame" x="300.33333333333331" y="3.6666666666666288" width="43" height="30"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -206,9 +206,9 @@
                                                                 <imageReference key="image" image="cloud.rain" catalog="system" symbolScale="large"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fX-c9-X1S" userLabel="Temperature Label">
-                                                                <rect key="frame" x="154" y="0.66666666666662877" width="43.333333333333343" height="36"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fX-c9-X1S" userLabel="Temperature Label">
+                                                                <rect key="frame" x="154" y="3.6666666666666288" width="43.333333333333343" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -216,10 +216,10 @@
                                                                 <rect key="frame" x="227.33333333333334" y="16.666666666666629" width="43.000000000000028" height="4"/>
                                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                             </progressView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYL-L6-VEu" userLabel="Temperature Label">
-                                                                <rect key="frame" x="300.33333333333331" y="0.66666666666662877" width="43" height="36"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYL-L6-VEu" userLabel="Temperature Label">
+                                                                <rect key="frame" x="300.33333333333331" y="3.6666666666666288" width="43" height="30"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -242,9 +242,9 @@
                                                                 <imageReference key="image" image="cloud.rain" catalog="system" symbolScale="large"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Op-wW-IzP" userLabel="Temperature Label">
-                                                                <rect key="frame" x="154" y="1" width="43.333333333333343" height="36"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Op-wW-IzP" userLabel="Temperature Label">
+                                                                <rect key="frame" x="154" y="4" width="43.333333333333343" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -252,10 +252,10 @@
                                                                 <rect key="frame" x="227.33333333333334" y="17" width="43.000000000000028" height="4"/>
                                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                             </progressView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S46-xx-JV2" userLabel="Temperature Label">
-                                                                <rect key="frame" x="300.33333333333331" y="1" width="43" height="36"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S46-xx-JV2" userLabel="Temperature Label">
+                                                                <rect key="frame" x="300.33333333333331" y="4" width="43" height="30"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -278,9 +278,9 @@
                                                                 <imageReference key="image" image="cloud.rain" catalog="system" symbolScale="large"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLi-sZ-lqh" userLabel="Temperature Label">
-                                                                <rect key="frame" x="154" y="1" width="43.333333333333343" height="36"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLi-sZ-lqh" userLabel="Temperature Label">
+                                                                <rect key="frame" x="154" y="4" width="43.333333333333343" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -288,10 +288,10 @@
                                                                 <rect key="frame" x="227.33333333333334" y="17" width="43.000000000000028" height="4"/>
                                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                             </progressView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-Jx-VoZ" userLabel="Temperature Label">
-                                                                <rect key="frame" x="300.33333333333331" y="1" width="43" height="36"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="2" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-Jx-VoZ" userLabel="Temperature Label">
+                                                                <rect key="frame" x="300.33333333333331" y="4" width="43" height="30"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -336,6 +336,9 @@
                         <outlet property="backgroundImage" destination="YWP-Fx-dic" id="Fni-83-IlQ"/>
                         <outlet property="cityLabel" destination="lCN-by-zi8" id="fvf-Tw-587"/>
                         <outlet property="conditionImageView" destination="lXw-5f-WQH" id="8DX-Zf-F2e"/>
+                        <outlet property="currConditionImageView" destination="dvd-Wo-Sg7" id="l09-Ej-aPQ"/>
+                        <outlet property="currHighTemp" destination="9UC-Or-9Bf" id="M0g-RG-DHr"/>
+                        <outlet property="currLowTemp" destination="E5W-jc-NVq" id="5G9-ER-YVN"/>
                         <outlet property="forecastView" destination="g0p-Rq-Of1" id="JNw-eP-Ved"/>
                         <outlet property="searchTextField" destination="C8W-d3-wT0" id="o2Q-Kg-Lon"/>
                         <outlet property="temperatureLabel" destination="o9f-G8-Rgh" id="pW2-pc-SfX"/>

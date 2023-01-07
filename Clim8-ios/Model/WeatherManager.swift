@@ -57,8 +57,10 @@ struct WeatherManager{
             let temp = decodedData.main.temp
             let name = decodedData.name
             let weatherDescription = decodedData.weather[0].description
+            let tempMin = decodedData.main.temp_min
+            let tempMax = decodedData.main.temp_max
             
-            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, description: weatherDescription)
+            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, description: weatherDescription, tempMin: Int(tempMin), tempMax: Int(tempMax))
             return weather
             
         } catch {
