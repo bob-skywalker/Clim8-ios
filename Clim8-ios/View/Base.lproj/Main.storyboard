@@ -22,8 +22,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.68999999999999995" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherBackground" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-Fx-dic" userLabel="weatherBackground">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bBb-I1-2rW">
-                                <rect key="frame" x="20" y="59" width="353" height="759"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bBb-I1-2rW">
+                                <rect key="frame" x="16" y="59" width="353" height="759"/>
                                 <subviews>
                                     <stackView contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SiV-9j-YwL">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
@@ -112,8 +112,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0p-Rq-Of1">
-                                        <rect key="frame" x="0.0" y="388" width="333" height="351"/>
+                                    <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0p-Rq-Of1">
+                                        <rect key="frame" x="0.0" y="387.66666666666674" width="353" height="371.33333333333326"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9FF-op-zUc">
                                                 <rect key="frame" x="0.0" y="35" width="343.33333333333331" height="308"/>
@@ -301,7 +301,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="9FF-op-zUc" secondAttribute="bottom" constant="28.329999999999998" id="1lI-HK-rIF"/>
                                             <constraint firstAttribute="trailing" secondItem="9FF-op-zUc" secondAttribute="trailing" constant="9.6699999999999999" id="HGG-Qs-xgc"/>
@@ -364,8 +364,8 @@
         <systemColor name="systemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
