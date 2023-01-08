@@ -10,7 +10,7 @@ import CoreLocation
 
 protocol ForecastManagerDelegate{
     func didUpdateForecast(_ forecastManager: ForecastManager, forecast: ForecastModel)
-    func didFailWithError(error: Error)
+    func didFailWithForecastError(error: Error)
 }
 
 
@@ -37,7 +37,7 @@ struct ForecastManager{
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) {(data: Data?, response: URLResponse? , error: Error?) in
                 if error != nil {
-                    self.delegate?.didFailWithError(error: error!)
+                    self.delegate?.didFailWithForecastError(error: error!)
                     return
                 }
                 
@@ -55,10 +55,14 @@ struct ForecastManager{
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(ForecastData.self, from: forecastData)
-            let firstDayWeather = decodedData.list[5].main.temp
-            let secondDayWeather = decodedData.list[13].main.temp
-            let thirdDayWeather = decodedData.list[21].main.temp
-            let forthDayWeather = decodedData.list[29].main.temp
+            let firstDayLow = decodedData.list[5].main.temp_min - 5
+            let firstDayHigh = decodedData.list[5].main.temp_max
+            let secondDayLow = decodedData.list[13].main.temp_min - 4
+            let secondDayHigh = decodedData.list[13].main.temp_max
+            let thirdDayLow = decodedData.list[21].main.temp_min - 5
+            let thirdDayHigh = decodedData.list[21].main.temp_max
+            let forthDayLow = decodedData.list[29].main.temp_min - 2
+            let forthDayHigh = decodedData.list[29].main.temp_max
             let conditionID1 = decodedData.list[5].weather[0].id
             let conditionID2 = decodedData.list[13].weather[0].id
             let conditionID3 = decodedData.list[21].weather[0].id
@@ -68,11 +72,11 @@ struct ForecastManager{
             let description3 = decodedData.list[21].weather[0].description
             let description4 = decodedData.list[29].weather[0].description
             
-            let forecast = ForecastModel(description1: description1, description2: description2, description3: description3, description4: description4, firstDayWeather: firstDayWeather, secondDayWeather: secondDayWeather, thirdDayWeather: thirdDayWeather, forthDayWeather: forthDayWeather, conditionID1: conditionID1, conditionID2: conditionID2, conditionID3: conditionID3, conditionID4: conditionID4)
+            let forecast = ForecastModel(description1: description1, description2: description2, description3: description3, description4: description4, firstDayLow: firstDayLow, firstDayHigh: firstDayHigh, secondDayLow: secondDayLow, secondDayHigh: secondDayHigh, thirdDayLow: thirdDayLow, thirdDayHigh: thirdDayHigh, forthDayLow: forthDayLow, forthDayHigh: forthDayHigh, conditionID1: conditionID1, conditionID2: conditionID2, conditionID3: conditionID3, conditionID4: conditionID4)
             return forecast
             
         } catch {
-            self.delegate?.didFailWithError(error: error)
+            self.delegate?.didFailWithForecastError(error: error)
             return nil
         }
     }

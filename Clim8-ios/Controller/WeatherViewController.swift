@@ -10,7 +10,6 @@
 
 import UIKit
 import CoreLocation
-import Shiny
 
 
 extension UIImageView {
@@ -48,6 +47,26 @@ class WeatherViewController: UIViewController{
     @IBOutlet weak var currHighTemp: UILabel!
     
     
+    @IBOutlet weak var day1ConditionImageView: UIImageView!
+    @IBOutlet weak var day1LowTemp: UILabel!
+    @IBOutlet weak var day1HighTemp: UILabel!
+    
+    
+    @IBOutlet weak var day2ConditionImageView: UIImageView!
+    @IBOutlet weak var day2LowTemp: UILabel!
+    @IBOutlet weak var day2HighTemp: UILabel!
+    
+    
+    @IBOutlet weak var day3ConditionImageView: UIImageView!
+    @IBOutlet weak var day3LowTemp: UILabel!
+    @IBOutlet weak var day3HighTemp: UILabel!
+    
+    
+    @IBOutlet weak var day4ConditionImageView: UIImageView!
+    @IBOutlet weak var day4LowTemp: UILabel!
+    @IBOutlet weak var day4HighTemp: UILabel!
+    
+    
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
         backgroundImage.image = UIImage(named: "sunny")
@@ -61,6 +80,7 @@ class WeatherViewController: UIViewController{
     var weatherManager = WeatherManager()
     var photoManager = PhotoManager()
     let locationManager = CLLocationManager()
+    var forecastManager = ForecastManager()
     
     
     
@@ -74,6 +94,7 @@ class WeatherViewController: UIViewController{
         photoManager.delegate = self
         weatherManager.delegate = self
         searchTextField.delegate = self
+        forecastManager.delegate = self
         
         forecastView.layer.cornerRadius = 35
     }
@@ -97,6 +118,7 @@ extension WeatherViewController: UITextFieldDelegate{
         if let city = searchTextField.text {
             weatherManager.fetchWeather(cityName: city)
             photoManager.fetchPhotos(cityName: city)
+            forecastManager.fetchForecast(cityName: city)
             searchTextField.text = ""
         }
     }
@@ -141,6 +163,7 @@ extension WeatherViewController: CLLocationManagerDelegate{
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
             weatherManager.fetchWeather(latitude: lat, longitude: lon)
+            forecastManager.fetchForecast(latitude: lat, longtitude: lon)
         }
         
     }
@@ -150,6 +173,7 @@ extension WeatherViewController: CLLocationManagerDelegate{
     }
 }
 
+//MARK: - PhotoManagerDelegate
 
 extension WeatherViewController: PhotoManagerDelegate{
     func didUpdatePhoto(_ photoManager: PhotoManager, photo: PhotoModel) {
@@ -161,4 +185,34 @@ extension WeatherViewController: PhotoManagerDelegate{
     func didFailWithPhotoError(error: Error) {
         print(error)
     }
+}
+
+//MARK: - ForecastManagerDelegate
+
+extension WeatherViewController: ForecastManagerDelegate{
+    func didUpdateForecast(_ forecastManager: ForecastManager, forecast: ForecastModel) {
+        DispatchQueue.main.async {
+            self.day1ConditionImageView.image = UIImage(systemName: forecast.conditionName1)
+            self.day1LowTemp.text = String(Int(forecast.firstDayLow))
+            self.day1HighTemp.text = String(Int(forecast.firstDayHigh))
+            
+            self.day2ConditionImageView.image = UIImage(systemName: forecast.conditionName2)
+            self.day2LowTemp.text = String(Int(forecast.secondDayLow))
+            self.day2HighTemp.text = String(Int(forecast.secondDayHigh))
+            
+            self.day3ConditionImageView.image = UIImage(systemName: forecast.conditionName3)
+            self.day3LowTemp.text = String(Int(forecast.thirdDayLow))
+            self.day3HighTemp.text = String(Int(forecast.thirdDayHigh))
+            
+            self.day4ConditionImageView.image = UIImage(systemName: forecast.conditionName4)
+            self.day4LowTemp.text = String(Int(forecast.forthDayLow))
+            self.day4HighTemp.text = String(Int(forecast.forthDayHigh))
+            
+        }
+    }
+    
+    func didFailWithForecastError(error: Error){
+        print(error)
+    }
+
 }

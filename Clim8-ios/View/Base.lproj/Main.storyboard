@@ -337,6 +337,18 @@
                         <outlet property="currConditionImageView" destination="dvd-Wo-Sg7" id="l09-Ej-aPQ"/>
                         <outlet property="currHighTemp" destination="9UC-Or-9Bf" id="M0g-RG-DHr"/>
                         <outlet property="currLowTemp" destination="E5W-jc-NVq" id="5G9-ER-YVN"/>
+                        <outlet property="day1ConditionImageView" destination="Z5V-p0-CDH" id="gnc-FZ-7xk"/>
+                        <outlet property="day1HighTemp" destination="sfZ-1a-f0i" id="jEv-CF-D9x"/>
+                        <outlet property="day1LowTemp" destination="Xiy-C2-FCa" id="Q98-rX-W4b"/>
+                        <outlet property="day2ConditionImageView" destination="Cev-01-XwV" id="4hD-fK-eMN"/>
+                        <outlet property="day2HighTemp" destination="qYL-L6-VEu" id="Wol-IP-LdB"/>
+                        <outlet property="day2LowTemp" destination="7fX-c9-X1S" id="Tc3-C4-HqQ"/>
+                        <outlet property="day3ConditionImageView" destination="lov-mR-YuN" id="m4N-F7-CWs"/>
+                        <outlet property="day3HighTemp" destination="S46-xx-JV2" id="xfh-mj-J17"/>
+                        <outlet property="day3LowTemp" destination="0Op-wW-IzP" id="uGm-H2-xmp"/>
+                        <outlet property="day4ConditionImageView" destination="FKi-nI-Xnb" id="AJG-cV-th1"/>
+                        <outlet property="day4HighTemp" destination="zhL-Jx-VoZ" id="UvN-q1-t49"/>
+                        <outlet property="day4LowTemp" destination="tLi-sZ-lqh" id="oM7-Nz-joP"/>
                         <outlet property="forecastView" destination="g0p-Rq-Of1" id="JNw-eP-Ved"/>
                         <outlet property="searchTextField" destination="C8W-d3-wT0" id="o2Q-Kg-Lon"/>
                         <outlet property="temperatureLabel" destination="o9f-G8-Rgh" id="pW2-pc-SfX"/>

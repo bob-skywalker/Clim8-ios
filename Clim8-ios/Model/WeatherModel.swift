@@ -58,28 +58,6 @@ struct WeatherModel{
         }
     }
     
-    var backgroundImage: String{
-        switch conditionId {
-        case 200...531:
-            return "rainy"
-        case 600...622:
-            return "snowy"
-        case 701:
-            return "rainy"
-        case 711:
-            return "cloudy"
-        case 731...762:
-            return "sunny"
-        case 771:
-            return "snowy"
-        case 781:
-            return "windy"
-        case 800...804:
-            return "sunny"
-        default:
-            return "sunny"
-        }
-    }
     
 }
 
