@@ -55,14 +55,16 @@ struct ForecastManager{
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(ForecastData.self, from: forecastData)
-            let firstDayLow = decodedData.list[5].main.temp_min - 5
-            let firstDayHigh = decodedData.list[5].main.temp_max
-            let secondDayLow = decodedData.list[13].main.temp_min - 4
-            let secondDayHigh = decodedData.list[13].main.temp_max
-            let thirdDayLow = decodedData.list[21].main.temp_min - 5
-            let thirdDayHigh = decodedData.list[21].main.temp_max
-            let forthDayLow = decodedData.list[29].main.temp_min - 2
-            let forthDayHigh = decodedData.list[29].main.temp_max
+            let lowDeviation = Double.random(in: 2...5)
+            let highDeviation = Double.random(in: 1...3)
+            let firstDayLow = decodedData.list[5].main.temp_min - lowDeviation
+            let firstDayHigh = decodedData.list[5].main.temp_max + highDeviation
+            let secondDayLow = decodedData.list[13].main.temp_min - lowDeviation
+            let secondDayHigh = decodedData.list[13].main.temp_max + highDeviation
+            let thirdDayLow = decodedData.list[21].main.temp_min - lowDeviation
+            let thirdDayHigh = decodedData.list[21].main.temp_max + highDeviation
+            let forthDayLow = decodedData.list[29].main.temp_min - lowDeviation
+            let forthDayHigh = decodedData.list[29].main.temp_max + highDeviation
             let conditionID1 = decodedData.list[5].weather[0].id
             let conditionID2 = decodedData.list[13].weather[0].id
             let conditionID3 = decodedData.list[21].weather[0].id
@@ -71,8 +73,12 @@ struct ForecastManager{
             let description2 = decodedData.list[13].weather[0].description
             let description3 = decodedData.list[21].weather[0].description
             let description4 = decodedData.list[29].weather[0].description
+            let dt1 = decodedData.list[5].dt_txt
+            let dt2 = decodedData.list[13].dt_txt
+            let dt3 = decodedData.list[21].dt_txt
+            let dt4 = decodedData.list[29].dt_txt
             
-            let forecast = ForecastModel(description1: description1, description2: description2, description3: description3, description4: description4, firstDayLow: firstDayLow, firstDayHigh: firstDayHigh, secondDayLow: secondDayLow, secondDayHigh: secondDayHigh, thirdDayLow: thirdDayLow, thirdDayHigh: thirdDayHigh, forthDayLow: forthDayLow, forthDayHigh: forthDayHigh, conditionID1: conditionID1, conditionID2: conditionID2, conditionID3: conditionID3, conditionID4: conditionID4)
+            let forecast = ForecastModel(description1: description1, description2: description2, description3: description3, description4: description4, firstDayLow: firstDayLow, firstDayHigh: firstDayHigh, secondDayLow: secondDayLow, secondDayHigh: secondDayHigh, thirdDayLow: thirdDayLow, thirdDayHigh: thirdDayHigh, forthDayLow: forthDayLow, forthDayHigh: forthDayHigh, conditionID1: conditionID1, conditionID2: conditionID2, conditionID3: conditionID3, conditionID4: conditionID4, dt1: dt1, dt2: dt2, dt3: dt3, dt4: dt4)
             return forecast
             
         } catch {

@@ -50,21 +50,24 @@ class WeatherViewController: UIViewController{
     @IBOutlet weak var day1ConditionImageView: UIImageView!
     @IBOutlet weak var day1LowTemp: UILabel!
     @IBOutlet weak var day1HighTemp: UILabel!
-    
+    @IBOutlet weak var day1Day: UITextField!
     
     @IBOutlet weak var day2ConditionImageView: UIImageView!
     @IBOutlet weak var day2LowTemp: UILabel!
     @IBOutlet weak var day2HighTemp: UILabel!
-    
+    @IBOutlet weak var day2Day: UITextField!
     
     @IBOutlet weak var day3ConditionImageView: UIImageView!
     @IBOutlet weak var day3LowTemp: UILabel!
     @IBOutlet weak var day3HighTemp: UILabel!
+    @IBOutlet weak var day3Day: UITextField!
     
     
     @IBOutlet weak var day4ConditionImageView: UIImageView!
     @IBOutlet weak var day4LowTemp: UILabel!
     @IBOutlet weak var day4HighTemp: UILabel!
+    @IBOutlet weak var day4Day: UITextField!
+    
     
     
     
@@ -195,18 +198,25 @@ extension WeatherViewController: ForecastManagerDelegate{
             self.day1ConditionImageView.image = UIImage(systemName: forecast.conditionName1)
             self.day1LowTemp.text = String(Int(forecast.firstDayLow))
             self.day1HighTemp.text = String(Int(forecast.firstDayHigh))
+            self.day1Day.text = forecast.dt1ToDay
             
             self.day2ConditionImageView.image = UIImage(systemName: forecast.conditionName2)
             self.day2LowTemp.text = String(Int(forecast.secondDayLow))
             self.day2HighTemp.text = String(Int(forecast.secondDayHigh))
+            self.day2Day.text = forecast.dt2ToDay
+
             
             self.day3ConditionImageView.image = UIImage(systemName: forecast.conditionName3)
             self.day3LowTemp.text = String(Int(forecast.thirdDayLow))
             self.day3HighTemp.text = String(Int(forecast.thirdDayHigh))
+            self.day3Day.text = forecast.dt3ToDay
+
             
             self.day4ConditionImageView.image = UIImage(systemName: forecast.conditionName4)
             self.day4LowTemp.text = String(Int(forecast.forthDayLow))
             self.day4HighTemp.text = String(Int(forecast.forthDayHigh))
+            self.day4Day.text = forecast.dt4ToDay
+
             
         }
     }

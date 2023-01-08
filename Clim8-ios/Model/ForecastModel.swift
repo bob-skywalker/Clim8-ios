@@ -24,8 +24,123 @@ struct ForecastModel{
     let conditionID2: Int
     let conditionID3: Int
     let conditionID4: Int
+    let dt1: String
+    let dt2: String
+    let dt3: String
+    let dt4: String
     
-
+    var dt1ToDay: String {
+        let dt1DateArr = dt1.split(separator: " ")
+        let dt1Date = dt1DateArr[0]
+        
+        let dt1Num = getDayOfWeek(String(dt1Date))
+        switch dt1Num {
+        case 1:
+            return "Sun"
+        case 2:
+            return "Mon"
+        case 3:
+            return "Tue"
+        case 4:
+            return "Wed"
+        case 5:
+            return "Thu"
+        case 6:
+            return "Fri"
+        case 7:
+            return "Sat"
+        default:
+            return "NaN"
+        }
+    }
+    
+    var dt2ToDay: String {
+        let dt2DateArr = dt2.split(separator: " ")
+        let dt2Date = dt2DateArr[0]
+        
+        let dt2Num = getDayOfWeek(String(dt2Date))
+        switch dt2Num {
+        case 1:
+            return "Sun"
+        case 2:
+            return "Mon"
+        case 3:
+            return "Tue"
+        case 4:
+            return "Wed"
+        case 5:
+            return "Thu"
+        case 6:
+            return "Fri"
+        case 7:
+            return "Sat"
+        default:
+            return "NaN"
+        }
+    }
+    
+    var dt3ToDay: String {
+        let dt3DateArr = dt3.split(separator: " ")
+        let dt3Date = dt3DateArr[0]
+        
+        let dt3Num = getDayOfWeek(String(dt3Date))
+        switch dt3Num {
+        case 1:
+            return "Sun"
+        case 2:
+            return "Mon"
+        case 3:
+            return "Tue"
+        case 4:
+            return "Wed"
+        case 5:
+            return "Thu"
+        case 6:
+            return "Fri"
+        case 7:
+            return "Sat"
+        default:
+            return "NaN"
+        }
+    }
+    
+    var dt4ToDay: String {
+        let dt4DateArr = dt4.split(separator: " ")
+        let dt4Date = dt4DateArr[0]
+        
+        let dt4Num = getDayOfWeek(String(dt4Date))
+        switch dt4Num {
+        case 1:
+            return "Sun"
+        case 2:
+            return "Mon"
+        case 3:
+            return "Tue"
+        case 4:
+            return "Wed"
+        case 5:
+            return "Thu"
+        case 6:
+            return "Fri"
+        case 7:
+            return "Sat"
+        default:
+            return "NaN"
+        }
+    }
+    
+    
+    
+    func getDayOfWeek(_ today:String) -> Int? {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        guard let todayDate = formatter.date(from: today) else { return nil }
+        let myCalendar = Calendar(identifier: .gregorian)
+        let weekDay = myCalendar.component(.weekday, from: todayDate)
+        return weekDay
+    }
+    
+   
     
     var conditionName1: String {
         switch conditionID1 {

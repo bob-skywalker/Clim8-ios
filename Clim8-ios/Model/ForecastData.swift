@@ -18,7 +18,7 @@ struct ForecastCoord: Codable{
 
 
 struct List: Codable{
-    let dt: Int
+    let dt_txt: String
     let main: Maino
     let weather: [Weathero]
 }
